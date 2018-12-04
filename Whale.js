@@ -25,6 +25,7 @@ var livyatan = Whale("Livyatan", "Livyatan melvillei", "Livyatan is an extinct g
 
 
 var whale_array = new Array[6];
+var whale_gallery = new Array[6];
 
 whale_array[0] = narwhal;
 whale_array[1] = bowhead;
@@ -32,3 +33,11 @@ whale_array[2] = killer;
 whale_array[3] = beluga;
 whale_array[4] = sperm;
 whale_array[5] = livyatan;
+
+
+whale_gallery[0] = "./images/narwhal.png";
+whale_gallery[1] = "./images/bowhead.png";
+whale_gallery[2] = "./images/killer.png";
+whale_gallery[3] = "./images/beluga.png";
+whale_gallery[4] = "./images/sperm.png";
+whale_gallery[5] = "./images/livyatan.png";

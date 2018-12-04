@@ -23,3 +23,12 @@ var sperm = Whale("Sperm Whale", "Physeter macrocephalu", "The sperm whale is th
 
 var livyatan = Whale("Livyatan", "Livyatan melvillei", "Livyatan is an extinct genus of sperm whale. Its name was inspired by the biblical sea monster Leviathan, and the author of the book Moby-Dick, Herman Melville, where the antagonist is a large sperm whale. It was found in the Pisco Formation of Peru and lived during the Tortonian stage of the Mioceneepoch, about 9.9–8.9 million years ago (mya), however a large tooth from Australia implies that either it or a close relative survived into the Pliocene, around 5 mya. It was a member of a group of hyper-predatory macroraptorial sperm whales and was likely an apex predator, preying on whales, seals, and so forth. Characteristic of raptorial sperm whales, Livyatan had functional, enamel-coated teeth on the upper and lower jaws, as well as several adaptations for hunting large prey.", "N/A", "16m", "0");
 
+
+var whale_array = new Array[6];
+
+whale_array[0] = narwhal;
+whale_array[1] = bowhead;
+whale_array[2] = killer;
+whale_array[3] = beluga;
+whale_array[4] = sperm;
+whale_array[5] = livyatan;

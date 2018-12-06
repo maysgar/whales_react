@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <WhaleLayout />
-        <div id="whaleIfno">
+        <div id="whaleInfo">
           {this.renderWhaleHouse(whales[0], 0)}
           {this.renderWhaleHouse(whales[1], 1)}
           {this.renderWhaleHouse(whales[2], 2)}

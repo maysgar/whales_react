@@ -1,18 +1,23 @@
 import React from 'react';
 
 
-const WhaleHouse = props =>(
-	<div>
-		<h1>{props.name} </h1>
-		<h2>{props.whaleObject[i].latin} </h2> 
-		<p>{props.about}	</p>
-		<p>{props.age} </p
-		<p>{props.size} </p>
-		<p>{props.amount} </p>
-		<img>{props.image} </img>		
-	</div>
-);
+class WhaleHouse extends React.Component {
+	render() {
+		return(
+			<div className="whaleText">
+				<h1>{this.props.name}</h1>
+				<h2><em>{this.props.latin}</em></h2> 
+				<p>{this.props.about}</p>
+				<p>{this.props.age}</p>
+				<p>{this.props.size}</p>
+				<p>{this.props.amount}</p>
+				<img src={this.props.image} />		
+			</div>
+		);
+	}
+}
 
+export default WhaleHouse;
 
 
 

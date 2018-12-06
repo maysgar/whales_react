@@ -1,0 +1,15 @@
+
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.whaleText {
+    background-color: #1B1464;
+    color: white;
+    border-radius: 100px;
+    padding: 2em;
+    margin: 1em;
+}

@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+
+//icons for WhaleCards
+import narwhalIcon from './img/narwhal.png'
+import bowheadIcon from './img/bowhead.png';
+import orcaIcon from './img/orca.png';
+import belugaIcon from './img/beluga.png';
+import spermIcon from './img/sperm.png';
+import livyatanIcon from './img/livyatan.png';
 
 //styling
 import './main.css';
@@ -6,10 +16,34 @@ import './main.css';
 //imports for other components
 import WhaleHouse from './WhaleHouse';
 import WhaleCard from './WhaleCard.js';
-import WhaleLayout from './WhaleLayout.js';
 
 
-class App extends Component { 
+class App extends Component {
+
+  constructor(props) {
+    super();
+    
+    this.state = {
+      count: props.count
+    };
+  
+    this.nextCard = this.nextCard.bind(this);
+  }
+  
+    nextCard() {
+      if(this.state.count == 5){
+        this.setState((prevState) => ({ count: 0 }));
+      }
+      else{
+        this.setState((prevState) => ({ count: prevState.count + 1 }));
+      }
+    }
+
+  renderWhaleCard(icon, i) {
+    return (
+      <WhaleCard image={icon} index={i} />
+    );
+  }
 
   renderWhaleHouse(obj, i) {
     return (<WhaleHouse 
@@ -26,22 +60,36 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
-        <WhaleLayout />
+        <div id="whaleIcons">
+          <div id="row1" className="row">
+            {this.renderWhaleCard(narwhalIcon, 0)}
+            {this.renderWhaleCard(bowheadIcon, 1)}
+            {this.renderWhaleCard(orcaIcon, 2)}
+          </div>
+          <div id="row2" className="row">
+            {this.renderWhaleCard(belugaIcon, 3)}
+            {this.renderWhaleCard(spermIcon, 4)}
+            {this.renderWhaleCard(livyatanIcon, 5)}
+          </div>
+        </div>
         <div id="whaleInfo">
-          {this.renderWhaleHouse(whales[0], 0)}
-          {this.renderWhaleHouse(whales[1], 1)}
-          {this.renderWhaleHouse(whales[2], 2)}
-          {this.renderWhaleHouse(whales[3], 3)}
-          {this.renderWhaleHouse(whales[4], 4)}
-          {this.renderWhaleHouse(whales[5], 5)}
+          {this.renderWhaleHouse(whales[this.state.count], this.state.count)}
+          <button onClick={this.nextCard}>Next</button>
         </div>
       </div>
     );
   }
 }
+
+App.defaultProps = {
+  count: 0
+};
+
+App.propTypes = {
+  count: PropTypes.number
+};
 
 export default App;
 

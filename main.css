@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
+    margin-bottom: 1.5em;
 }
 
 .whaleText {
@@ -12,4 +13,17 @@
     border-radius: 100px;
     padding: 2em;
     margin: 1em;
+    height: 120%;
+}
+
+#closeButton {
+    position: relative;
+    bottom: 23em;
+    left: 90%;
+    /* border-radius: 10px; */
+}
+
+#whaleInfo {
+    position: absolute;
+    top: 0%;
 }

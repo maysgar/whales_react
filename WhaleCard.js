@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class WhaleCard extends React.Component {
+export default class WhaleCard extends React.Component {
 	render() {
 
 		return(
@@ -11,5 +11,3 @@ export class WhaleCard extends React.Component {
 	}
 
 }
-
-export default WhaleCard;

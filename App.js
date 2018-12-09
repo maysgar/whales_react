@@ -24,14 +24,15 @@ class App extends Component {
     super();
     
     this.state = {
-      count: props.count
+      count: props.count,
+      show: false,
     };
   
     this.nextCard = this.nextCard.bind(this);
   }
   
     nextCard() {
-      if(this.state.count == 5){
+      if(this.state.count === 5){
         this.setState((prevState) => ({ count: 0 }));
       }
       else{
@@ -41,7 +42,11 @@ class App extends Component {
 
   renderWhaleCard(icon, i) {
     return (
-      <WhaleCard image={icon} index={i} />
+      <WhaleCard 
+      image={icon} 
+      index={i} 
+      onClick={() => this.HandleWhaleCardClick(i)}
+      />
     );
   }
 
@@ -55,8 +60,24 @@ class App extends Component {
       size={obj.size}
       amount={obj.amount}
       image={obj.image}
+      onClick={() => this.HandleCloseClick()}
       />
     );
+  }
+
+  HandleWhaleCardClick(i) {
+    //console.log("index: " + i);
+    this.setState({
+      count: i,
+      show: true,
+    });
+  }
+
+  HandleCloseClick() {
+    console.log("In HandleCloseClick()");
+    this.setState({
+      show: false,
+    })
   }
 
   render() {
@@ -75,7 +96,7 @@ class App extends Component {
           </div>
         </div>
         <div id="whaleInfo">
-          {this.renderWhaleHouse(whales[this.state.count], this.state.count)}
+          {this.state.show ? this.renderWhaleHouse(whales[this.state.count], this.state.count) : null}
           <button onClick={this.nextCard}>Next</button>
         </div>
       </div>

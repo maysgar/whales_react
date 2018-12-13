@@ -1,0 +1,12 @@
+      body{
+        text-align: center;
+        font-size: 200%;
+        display: flex;
+        flex-direction: column;
+      }
+      div{
+        margin-top: 2%;
+      }
+      .wi:hover{
+        opacity: .3;
+      }

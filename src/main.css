@@ -1,0 +1,96 @@
+
+
+
+body{
+    text-align: center;
+    font-size: 200%;
+
+    
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#indexp{
+    color: LightBlue;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+     font-size: 300%;
+}
+#indexhone{
+    color: #1B1464;
+}
+
+h2{
+    font-family: 'Lobster', cursive;
+    color: LightBlue;
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+}
+
+div{
+    margin-top: 1%;
+}
+
+.whaleCard:hover{
+   opacity: .3;
+} 
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+}
+
+.whaleText {
+    background-color: #1B1464;
+    color: white;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: LightBlue;
+    padding: 5em;
+    padding-top: 2em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    height: 120%;
+    
+}
+
+#whaleInfo {
+    position: absolute;
+    top: 0%;
+}
+
+button{
+    background-color: LightBlue;
+    border-width: 5px;
+    border-color: LightBlue;
+    text-decoration: none;
+    color: #1B1464;
+    font-family: 'Lobster', cursive;
+    padding: 2%;
+    font-size: 200%;
+    border-radius: 150px;
+}
+
+button:hover{
+    background-color: white;
+    border-style: solid;
+    border-color: LightBlue;
+    border-width: 5px;
+    color: #1B1464;
+}
+
+#bottombutton{
+    margin-top: 1%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
